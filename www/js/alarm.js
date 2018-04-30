@@ -30,7 +30,7 @@ function tick(){
 	// now change the display
 	timeDisplay.innerHTML = message;
 
-	// stop is down to zero
+	// if the time is up, then an alert pops up and reset the page.
 	if (secondsRemaining === 0){
 		alert("Done!");
 		clearInterval(intervalHandle);
@@ -48,13 +48,15 @@ function startCountdown(){
 		document.getElementById("alarmCl").style.display = "block";
 	}
 
-	// get countents of the "minutes" text box
+	// get countents of the "alarmCl" text box
    
 	var minutes = document.getElementById("alarmCl").value;
     var parMin = parseInt(minutes);
   
     
-    
+    /*
+    The given date and time and the actual date and time is converted to miliseconds
+    */
     var currentDate = document.getElementById("mydate").value;
     var currentTime = document.getElementById("mytime").value;
     var date_obj = Date.parse(currentDate +" "+ currentTime);
@@ -93,7 +95,7 @@ function startCountdown(){
 	intervalHandle = setInterval(tick, 1000);
 
 	// hide the form
-	//document.getElementById("inputArea").style.display = "none";
+	//The set up time displayed
     var Display2 = document.getElementById("time2");
 
     if (parMin === 60){
