@@ -55,7 +55,7 @@ function startCountdown(){
   
     
     /*
-    The given date and time and the actual date and time is converted to miliseconds
+    The given date and time and the actual date and time is converted to miliseconds.
     */
     var currentDate = document.getElementById("mydate").value;
     var currentTime = document.getElementById("mytime").value;
@@ -72,11 +72,11 @@ function startCountdown(){
     var x = Date.parse(d);
     var date_mx = Math.floor(x/60000).toFixed(1);
     
-    
+    //The given time and actual time substracted from each other.
     var diff = (date_min-date_mx);
     console.log("Diff in mins1 "+diff);
    
-   
+   //The given minutes are substructed from the substuruction of the given time and actual time.
     var total = (diff-parMin);
     console.log("Diff in mins2 "+total);
 	
@@ -101,7 +101,7 @@ function startCountdown(){
     if (parMin === 60){
         parMin="00";
     }
-   
+   //Displays the time the alarm will appear.
      var message2 =  (another-1) + " : " +   parMin ;
    
 
