@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">   
+<!--<link rel="stylesheet" href="index.css">-->
+<script src="jquerymobile/jquery-1.11.1.min.js"></script>
+<script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>  
+<!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn__qjdqcfvl6zXthkIeltbb-8wmEPmgY&callback=initMap">
+    </script>-->
+<!--<script src="jquery/jquery-3.3.1.slim.min.js"></script> -->  
+<script src="phonegap.js"></script>    
+<script src="js/index.js"></script>
+<script src="js/alarm.js"></script>
+<!--<script src="js/backendless.js"></script>
+<script src="js/record.js"></script>-->    
+</head>
+<body>
+   
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Go!Go!Go!</h1>
+   <a href="#pagetwo" data-role="button" class="ui-btn-right" data-icon="plus">Add alarm</a>  
+  </div>
+
+  <div data-role="main" class="ui-content">
+   <ul data-role="listview" id="alarmlist">
+        <li><div data-role="results" class="ui-grid-a" id="result">   
+           <h1 id="time"></h1>
+           <h1 id="time2"></h1>   
+            <div id="maincol" data-role="main" class="ui-content" >
+            <div id="col1" data-role="collapsible" class="ui-block-a">
+              <h1>Info</h1>
+                <div id="right-panel"></div>
+            </div>
+          </div>    
+         </div>
+      </li>
+    </ul>
+  </div>
+
+ 
+</div> 
+
+   <div data-role="page" id="pagetwo">
+
+	<div data-role="header">
+		<h1>Set Up Journey</h1>
+        <a href="#pageone" data-role="button" data-icon="arrow-l">Back</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" id="setUpForm">
+		
+
+  <strong>Start:</strong>
+    <input type="text" id="start" value=""><br>
+    
+    
+  <strong>End:</strong>
+    <input type="text" id="end"><br>
+    
+    <strong>Select Date: </strong>
+    <input type="date" id="mydate"><br>
+    
+    <strong>Select Time: </strong>
+    <input type="time" id="mytime"><br>
+    
+    <strong>Setting Up Alarm: </strong>
+    <input type="text" id="alarmCl" ><br>
+    <a href="#pageone" data-role="button" type="submit" value="Submit" id="submitButton" data-theme="b">Submit</a><br>
+     </div>   
+ 
+      
+    
+</div><!-- /page -->
+     
+    
+       
+
+    
+    <!--<div id="map"></div>
+    
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn__qjdqcfvl6zXthkIeltbb-8wmEPmgY&callback=testfunction&libraries=places"
+    async defer></script>
+
+</body>
+</html>
+
+
